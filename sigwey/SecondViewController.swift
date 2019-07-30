@@ -16,15 +16,22 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Edit" {
+            let thirdVC = segue.destination as! ThirdViewController //кастим до ThirdViewController чтобы получить доступ к свойствам этого контроллера
+            thirdVC.text = segue.identifier
+        }
     }
-    */
+    
+    //название не важно, главное чтобы параметр был UIStoryboardSegue и затем на сториборд 3 на кнопку exit и примощи этого метода можно передать значение из 3 VC во второй
+    //Этот метод тоже срабатывет, когда нажимаем на кнопку в 3 VC 
+    @IBAction func unwind(seque: UIStoryboardSegue) {
+        let thirdVC = seque.source as! ThirdViewController //тут он являестья источником ресурсов, поэтому source
+        title = thirdVC.text
+    }
+   
+    deinit {
+        print("SecondVC has uloaded from memory")
+    }
 
 }

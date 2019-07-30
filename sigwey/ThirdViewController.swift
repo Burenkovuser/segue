@@ -10,21 +10,25 @@ import UIKit
 
 class ThirdViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    
+    var text: String! //в это свойство будем передавать индентификатор сигвея
+    
+    
+    @IBAction func closedVC() {
+        //dismiss(animated: true)
+        text = textField.text // берем значение из текстового поля, чтобы потом его передать во второй VC 
+    }
+ 
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        textField.text = text //и здесь будем присваивать передаваемое значение
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    deinit {
+         print("ThirdVC has uloaded from memory")
     }
-    */
-
 }
