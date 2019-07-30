@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Go to secondVC"/>
                                 <connections>
-                                    <segue destination="3f7-4X-K39" kind="show" id="D4y-u5-vXm"/>
+                                    <segue destination="3f7-4X-K39" kind="show" identifier="DetailVC" id="D4y-u5-vXm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,20 +40,60 @@
             </objects>
             <point key="canvasLocation" x="1009" y="743"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="wEh-9r-LmM">
             <objects>
-                <viewController id="3f7-4X-K39" sceneMemberID="viewController">
+                <viewController id="3f7-4X-K39" customClass="SecondViewController" customModule="sigwey" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VzD-Gj-TsO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXY-Cf-YUg">
+                                <rect key="frame" x="119.5" y="424" width="175" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Go to thirdVC"/>
+                                <connections>
+                                    <segue destination="cWy-At-JjN" kind="presentation" identifier="Edit" id="PYL-sT-tXT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.98332244160000004" green="0.50221842530000005" blue="0.0099967326970000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TXY-Cf-YUg" firstAttribute="centerY" secondItem="VzD-Gj-TsO" secondAttribute="centerY" id="4C8-l2-knh"/>
+                            <constraint firstItem="TXY-Cf-YUg" firstAttribute="centerX" secondItem="VzD-Gj-TsO" secondAttribute="centerX" id="Cne-3v-zKd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S2G-0i-B5u"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0L-Pj-SHX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1777" y="743"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="dfZ-PJ-OlI">
+            <objects>
+                <viewController id="cWy-At-JjN" customClass="ThirdViewController" customModule="sigwey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xep-Wj-b5L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8y9-sz-iN0">
+                                <rect key="frame" x="134.5" y="424" width="145" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="ClousedVS"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42793661779999997" green="0.73162101239999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8y9-sz-iN0" firstAttribute="centerY" secondItem="xep-Wj-b5L" secondAttribute="centerY" id="2jG-jw-3nJ"/>
+                            <constraint firstItem="8y9-sz-iN0" firstAttribute="centerX" secondItem="xep-Wj-b5L" secondAttribute="centerX" id="aFE-Yd-t5C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lqz-vU-6VM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BU0-nA-M4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2543" y="740"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cIz-Wb-OkD">
